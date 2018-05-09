@@ -1,0 +1,102 @@
+
+$defaultColor:rgba(1, 157, 250, 1);
+$defalutFontColor:rgba(77, 79, 81, 1);
+// 表单
+.form-group {
+    position: relative;
+    margin: 0 1rem;
+    display: flex;
+    flex-direction: column;
+    margin-top: 1rem;
+    .form-label {
+        font-size: 1.4rem;
+        padding: .8rem 0;
+        color: rgba(77, 79, 81, 1);
+        span {
+            color: RGBA(151, 151, 151, 1);
+        }
+    }
+    .form-select {
+        display: flex;
+        position: relative;
+        font-size: 1rem;
+        .select-icon-inner {
+            color: $defaultColor;
+        }
+        .select-ios {
+            max-width: 100%;
+            flex: 1;
+            padding: 11px 8px 11px 0px;
+            color: #828A9E;
+        }
+        .select-placeholder {
+            color: RGBA(151, 151, 151, 1);
+        }
+    }
+    .form-textarea {
+        height: 8rem;
+        margin-top: .5rem;
+        box-shadow: 0 6px 10px rgba(204, 204, 204, 0.16);
+        textarea {
+            height: 100%;
+            width: 100%;
+            resize: none;
+            color: #828A9E;
+            border: none;
+            &::placeholder {
+                color: RGBA(151, 151, 151, 1);
+            }
+        }
+    }
+    .form-input-wrap {
+        display: flex;
+        height: 3.5rem;
+        line-height: 3.5rem;
+        background: white;
+        .icon {
+            height: 3.5rem;
+            width: 3.5rem;
+            box-shadow: 0 6px 10px rgba(204, 204, 204, 0.16);
+            &.phone-icon {
+                background: rgba(232, 232, 232, 1) url("../assets/img/tell-icon.png") center center no-repeat;
+            }
+            &.pass-icon {
+                background: rgba(232, 232, 232, 1) url("../assets/img/pass-icon.png") center center no-repeat;
+            }
+            &.email-icon {
+                background: rgba(232, 232, 232, 1) url("../assets/img/email-icon.png") center center no-repeat;
+            }
+        }
+        .form-input {
+            border: none;
+            flex: 1;
+            padding-left: .8rem;
+            font-size: 1.2rem;
+            box-shadow: 0 6px 10px rgba(204, 204, 204, 0.16);
+        }
+        .form-input[disabled] {
+            color: rgba(77, 79, 81, 1);
+        }
+        .input-text {
+            color: $defaultColor;
+            text-align: center;
+            padding: 0 1rem;
+            font-size: 1.4rem;
+            margin-left: 1rem;
+            border: 1px solid rgba(232, 232, 232, 0.65);
+        }
+    }
+    .submit-btn {
+        // margin-top: 2rem;
+        padding: 1rem;
+        text-align: center;
+        background: white;
+        color: $defaultColor;
+        border: 1px solid $defaultColor;
+    }
+    .bg-gray {
+        background: rgba(77, 79, 81, 1);
+        color: white;
+        border: 1px solid rgba(77, 79, 81, 1);
+    }
+}
