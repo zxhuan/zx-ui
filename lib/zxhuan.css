@@ -476,6 +476,13 @@ textarea {
     transform: rotate(135deg)
 }
 
+.zx-select .form-input-wrap .form-input {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    padding-right: 30px;
+}
+
 .form-input-wrap .form-input {
     border: none;
     -webkit-box-flex: 1;

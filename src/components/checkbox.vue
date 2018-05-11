@@ -2,7 +2,7 @@
     <div class="checkbox">
         <zx-form-group title="checkox选项">
             <span slot="label-text">当前选中的值:{{value}}</span>
-            <zx-checkbox-group v-model='value' ref='value' :rules="rules.checkbox" flex >
+            <zx-checkbox-group v-model='value' ref='value' :rules="rules.checkbox" flex>
                 <zx-checkbox-item value="选项卡一">选项卡一</zx-checkbox-item>
                 <zx-checkbox-item value="选项卡二" disabled>选项卡二</zx-checkbox-item>
                 <zx-checkbox-item value="选项卡三" disabled>选项卡三</zx-checkbox-item>
@@ -49,6 +49,9 @@
                 }
                 console.log(this.value);
             }
+        },
+        created() {
+            this.$store.dispatch('setTtile', 'checkbox');
         }
     };
 </script>

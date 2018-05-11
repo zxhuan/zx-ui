@@ -13,7 +13,7 @@
     </zx-form-group>
     <hr>
     <zx-form-group title='手机号'>
-      <zx-input v-model='subForm.mobile' place='请输入您的手机号' ref='mobile' :rules='rules.mobile' type='number'>
+      <zx-input v-model='subForm.mobile' place='请输入您的手机号' ref='mobile' :rules='rules.mobile' type='number' @enter="enterFn">
       </zx-input>
     </zx-form-group>
     <zx-form-group title='验证码'>
@@ -84,6 +84,9 @@
       };
     },
     methods: {
+      enterFn() {
+        console.log(111);
+      },
       // 获取验证码
       getCode(item, innerText, $event) {
         if (!this.checkItem(item)) {
@@ -127,6 +130,9 @@
           position: 'top'
         });
       }
+    },
+    created() {
+      this.$store.dispatch('setTtile', 'input');
     }
   };
 </script>

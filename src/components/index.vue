@@ -1,6 +1,13 @@
 <template>
   <div class="index-cont">
     <p>一个基于Vue2.x的移动端UI。项目中写的一些简单的vueUI框架，不断学习不断完善</p>
+    <div style="display: flex;justify-content: space-between;padding:0 10px">
+      <a href='https://github.com/zxhuan/zx-ui.git'>git 地址</a>
+      <a href="https://www.npmjs.com/package/zx-ui">npm 地址</a>
+      <a href="https://zxhuan.github.io/eg/">案例</a>      
+    </div>
+    <div>
+    </div>
     <zx-cell-group>
       <zx-cell-item type='link' border arrow href='/button'>
         <span slot='left'>按钮</span>
@@ -52,6 +59,9 @@
     data() {
       return {
       };
+    },
+    created() {
+      this.$store.dispatch('setTtile', '首页');
     }
   };
 </script>

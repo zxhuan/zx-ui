@@ -4,9 +4,9 @@
     <textarea v-if="type=='textarea'" class="form-textarea" :placeholder="place" autocomplete="off" ref="input" v-model="currentValue"
       :disabled="disabled" @change='blurHandler'></textarea>
     <input :type="type" class="form-input" :placeholder="place" autocomplete="off" ref="input" v-model="currentValue" :disabled="disabled"
-      @change='changeHandler($event)' v-else-if="type=='file'">
+      @change='changeHandler($event)' v-else-if="type=='file'" @keyup.enter="enterFn($event)">
     <input :type="type" class="form-input" :placeholder="place" autocomplete="off" ref="input" v-model="currentValue" @blur="blurHandler"
-      :disabled="disabled" @change='blurHandler' v-else>
+      :disabled="disabled" @change='blurHandler' @keyup.enter="enterFn($event)" v-else>
     <slot name="text"></slot>
     <slot></slot>
   </div>
@@ -67,6 +67,9 @@
       }
     },
     methods: {
+      enterFn($event) {
+        this.$emit('enter', $event)
+      },
       blurHandler() {
         this.$emit(this.currentValue, true);
       },

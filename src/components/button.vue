@@ -21,6 +21,9 @@
       clickFn() {
         this.largeButton = 'this is large button';
       }
+    },
+    created() {
+      this.$store.dispatch('setTtile', 'button');
     }
   };
 </script>

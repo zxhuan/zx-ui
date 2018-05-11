@@ -32,6 +32,9 @@
       closeMask() {
         console.log('关闭图层');
       }
+    },
+    created() {
+      this.$store.dispatch('setTtile', 'popup');
     }
   };
 </script>

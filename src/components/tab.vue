@@ -20,6 +20,9 @@
       return {
         active: 'tab1'
       };
+    },
+    created() {
+      this.$store.dispatch('setTtile', 'tab');
     }
   };
 </script>

@@ -25,6 +25,9 @@
     name: 'cell',
     data() {
       return {};
+    },
+    created() {
+      this.$store.dispatch('setTtile', 'cell');
     }
   };
 </script>

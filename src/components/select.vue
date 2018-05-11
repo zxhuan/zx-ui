@@ -33,6 +33,9 @@
         this.addressValue = val;
         console.log(val);
       }
+    },
+    created() {
+      this.$store.dispatch('setTtile', 'select');
     }
   };
 </script>

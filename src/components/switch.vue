@@ -27,6 +27,7 @@
       }
     },
     created() {
+      this.$store.dispatch('setTtile', 'switch');
     }
   };
 </script>

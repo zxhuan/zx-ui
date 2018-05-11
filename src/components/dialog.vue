@@ -66,6 +66,9 @@
           }
         });
       }
+    },
+    created() {
+      this.$store.dispatch('setTtile', 'dialog');
     }
   };
 </script>

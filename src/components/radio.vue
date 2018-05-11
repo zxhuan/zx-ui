@@ -55,6 +55,9 @@
       getValue(val) {
         console.log(val);
       }
+    },
+    created() {
+      this.$store.dispatch('setTtile', 'radio');
     }
   };
 </script>
