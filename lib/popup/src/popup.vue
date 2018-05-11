@@ -56,7 +56,7 @@
         }
       },
       checkClass() {
-        return 'popup-cont-' + this.position;
+        return  `popup-cont-${this.position}`;
       },
       close($event) {
         this.show = false;
@@ -64,7 +64,7 @@
         this.$emit('close', $event);
       },
       checkName() {
-        return 'popup-' + this.position;
+        return  `popup-${this.position}`;
       }
     },
   };

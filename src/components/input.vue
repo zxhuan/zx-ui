@@ -4,6 +4,7 @@
       <zx-input v-model='inputValue' place='请输入您的姓名'></zx-input>
     </zx-form-group>
     <zx-form-group title='用户名'>
+      <span slot="label-text">这里写姓名备注</span>
       <zx-input v-model='inputValue' place='请输入您的用户名'></zx-input>
     </zx-form-group>
     <zx-form-group title='用户名+图标'>

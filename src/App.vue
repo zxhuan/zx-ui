@@ -45,6 +45,7 @@
     line-height: 45px;
     box-shadow: 0 6px 10px rgba(204, 204, 204, 0.16);
     background: white;
+    z-index: 99;
   }
 
   .zx-header .icon {

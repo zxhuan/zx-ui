@@ -47,7 +47,7 @@
     },
     methods: {
       checkClass(ele) {
-        return this.currentValue ? 'ischeck' : 'uncheck';
+        return `${this.currentValue ? 'ischeck' : 'uncheck'}`;
       },
       checkStyle() {
         return this.currentValue ? `background:${this.activeColor}` : `background:${this.inactiveColor}`;

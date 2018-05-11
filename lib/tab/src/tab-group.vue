@@ -2,7 +2,9 @@
   <div class="zx-tab-group">
     <ul class="zx-tab-nav">
       <!-- <li v-for='(item,key) in tabNavList' class="tab-nav-item" :class="item.key==tabActive?'tab-nav-active':''" @click="checkActive(item)"  :key="key">{{item.value}}</li> -->
-      <li v-for='item in tabNavList' class="tab-nav-item" :class="item.name==showTab?'tab-nav-active':''" @click="checkActiveName(item)">{{item.value}}</li>
+      <li v-for='item in tabNavList' class="tab-nav-item" :class="item.name==showTab?'tab-nav-active':''" @click="checkActiveName(item)">
+        {{item.value}}
+      </li>
     </ul>
     <div class="tab-content">
       <slot></slot>
@@ -21,9 +23,6 @@
         tabActive: 0,
         showTab: this.value
       };
-    },
-    computed: {
-
     },
     methods: {
       init() {

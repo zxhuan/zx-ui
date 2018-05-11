@@ -1,20 +1,20 @@
 <template>
-  <div class="dialog" style="padding-top: 10px">
+  <div class="dialog">
     <h2>toast</h2>
     <div class="flex">
-      <zx-button @click="toastFn('bottom')">toast['bottom']</zx-button>
-      <zx-button @click="toastFn('top')">toast['top']</zx-button>
-      <zx-button @click="toastFn('center')">toast['center']</zx-button>
-      <zx-button @click="toastFn('top',5000)">5s后移除</zx-button>
-      <zx-button @click="removeFn">弹出，但不移除</zx-button>
+      <zx-button @click="toastFn('bottom')" type='primary'>toast['bottom']</zx-button>
+      <zx-button @click="toastFn('top')" type='primary'>toast['top']</zx-button>
+      <zx-button @click="toastFn('center')" type='primary'>toast['center']</zx-button>
+      <zx-button @click="toastFn('top',5000)" type='success'>5s后移除</zx-button>
+      <zx-button @click="removeFn" type='warning'>弹出，但不移除</zx-button>
     </div>
     <h2>alert</h2>
     <div class="flex">
-      <zx-button @click="alertFn">alert</zx-button>
+      <zx-button @click="alertFn"  type='success'>alert</zx-button>
     </div>
     <h2>confirm</h2>
     <div class="flex">
-      <zx-button @click="confirmFn">confirm</zx-button>
+      <zx-button @click="confirmFn" type='danger'>confirm</zx-button>
     </div>
   </div>
 </template>
@@ -73,6 +73,9 @@
   };
 </script>
 <style scoped>
+  .dialog{
+    padding: 10px;
+  }
   .flex {
     margin-bottom: 10px;
     display: flex;

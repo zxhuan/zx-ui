@@ -5,9 +5,9 @@
     <zx-button type='info'>info</zx-button>
     <zx-button type='warning'>warning</zx-button>
     <zx-button type='danger'>danger</zx-button>
-    <zx-button type='primary' size='min'>button min</zx-button>
+    <zx-button type='primary' size='mini'>button mini</zx-button>
     <zx-button type='primary' size='large'>{{largeButton}}</zx-button>
-    <zx-button type='primary' @click="clickFn">click button</zx-button>
+    <zx-button type='primary' @click="clickFn" flex>click button</zx-button>
   </div>
 </template>
 <script>
@@ -33,6 +33,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    padding: 10px;
   }
 
   .zx-button {

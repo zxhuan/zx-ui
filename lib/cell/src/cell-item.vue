@@ -18,41 +18,33 @@
   </div>
 </template>
 <script>
-export default {
-  name: 'zx-cell-item',
-  props: {
-    title: String,
-    arrow: {
-      type: Boolean,
-      default: false
+  export default {
+    name: 'zx-cell-item',
+    props: {
+      title: String,
+      arrow: {
+        type: Boolean,
+        default: false
+      },
+      type: {
+        type: String,
+        default: 'label'
+      },
+      href: {
+        type: [String, Object]
+      },
+      border: {
+        type: Boolean,
+        default: false
+      }
     },
-    type: {
-      type: String,
-      default: 'label'
-    },
-    href: {
-      type: [String, Object]
-    },
-    border: {
-      type: Boolean,
-      default: false
-    }
-  },
-  methods: {
-    clickFn($event) {
-      this.$emit('click');
-    },
-    checkClass() {
-      if (this.arrow && this.border) {
-        return 'arrow border';
-      } if (this.arrow && !this.border) {
-        return 'arrow';
-      } if (!this.arrow && this.border) {
-        return 'border';
-      } else {
-        return '';
+    methods: {
+      clickFn($event) {
+        this.$emit('click');
+      },
+      checkClass() {
+        return `${this.arrow ? 'arrow' : ''} ${this.border ? 'border' : ''}`
       }
     }
-  }
-};
+  };
 </script>

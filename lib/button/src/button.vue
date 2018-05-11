@@ -17,15 +17,16 @@
       type: {
         type: String,
         default: 'info'
-        // validator: function (value) {
-        //     console.log(value);
-        // },
       },
       size: {
         type: String,
         default: 'default'
       },
       disabled: {
+        type: Boolean,
+        default: false
+      },
+      flex: {
         type: Boolean,
         default: false
       }
@@ -36,11 +37,15 @@
       },
       checkClass() {
         // 判断是否禁用
-        let disabled = '';
+        let disabled = '', flex = '';
         if (this.disabled) {
           disabled = 'disabled';
         }
-        return 'zx-button-' + this.type + ' size-' + this.size + ' ' + disabled;
+        if (this.flex) {
+          flex = 'flex'
+        }
+        return `zx-button-${this.type} size-${this.size} ${disabled} ${flex}`;
+        // return 'zx-button-' + this.type + ' size-' + this.size + ' ' + disabled;
       }
     }
   };
