@@ -339,24 +339,28 @@ textarea {
     display: flex;
     margin: 0 0 10px 0;
     padding: 0;
-    border-bottom: 0.5px solid #e4e4e4;
+    border-bottom: 1px solid #e4e4e4;
     position: relative;
 }
 
 .zx-tab-group .zx-tab-nav .tab-nav-item {
-    padding: 10px 15px;
+    padding: 10px 0;
     cursor: pointer;
     position: relative;
+    box-sizing: border-box;
 }
 
+.zx-tab-group.top .zx-tab-nav .tab-nav-item:not(:last-of-type) {
+    margin-right: 15px;
+}
 
 .zx-tab-group .zx-tab-nav .tab-nav-item.tab-nav-active {
-    color: #1d90e6;
+    /* color: #1d90e6; */
     position: relative;
 }
 
 .zx-tab-group .zx-tab-nav .tab-nav-item.tab-nav-active::after {
-    content: '';
+    /* content: ''; */
     position: absolute;
     left: 0;
     right: 0;
@@ -366,12 +370,19 @@ textarea {
     background: #1d90e6;
 }
 
+.zx-tab-nav .tab-active {
+    position: absolute;
+    transition: transform ease-in-out 0.3s;
+    background: #1d90e6;
+}
+
 .zx-tab-group .tab-content {
     position: relative;
 }
 
 .zx-tab-group .tab-content .zx-tab-c {
     display: none;
+    text-align: left;
 }
 
 .zx-tab-group .tab-content .zx-tab-active {
@@ -381,6 +392,49 @@ textarea {
 .nobg {
     background: none !important;
 }
+
+.zx-tab-group.left {
+    display: flex;
+}
+
+.zx-tab-group.left .zx-tab-nav {
+    flex-direction: column;
+    border: none;
+    border-right: 1px solid #e4e4e4;
+}
+
+.zx-tab-group.top .zx-tab-nav .tab-active {
+    height: 2px;
+    bottom: -1px;
+}
+.zx-tab-group.left .zx-tab-nav{
+    margin-right: 10px;
+    padding-right: 10px;
+}
+.zx-tab-group.left .zx-tab-nav .tab-active {
+    width: 2px;
+    right: -1px;
+}
+.zx-tab-group.right{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row-reverse;
+}
+.zx-tab-group.right .zx-tab-nav {
+    flex-direction: column;
+    border: none;
+    border-left: 1px solid #e4e4e4;
+}
+
+.zx-tab-group.right .zx-tab-nav{
+    margin-left: 10px;
+    padding-left: 10px;
+}
+.zx-tab-group.right .zx-tab-nav .tab-active {
+    width: 2px;
+    left: -1px;
+}
+/* zx-toast */
 
 .zx-toast {
     background: rgba(0, 0, 0, 0.8);

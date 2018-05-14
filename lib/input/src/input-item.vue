@@ -32,6 +32,9 @@
         type: Boolean,
         default: false
       },
+      limitPoint: {
+        type: [String, Number]
+      },
       rules: [Object, Array]
     },
     data() {
@@ -59,6 +62,7 @@
         this.emitInput();
       },
       currentValue(val) {
+        this.validNumLength(val);
         this.validatorInput(val, true);
         this.emitInput();
       },
@@ -67,6 +71,16 @@
       }
     },
     methods: {
+      // 显示小数点
+      validNumLength(val) {
+        if (this.type == 'number' && this.limitPoint) {
+          this.currentValue = this.currentValue.replace(/[^\d.]/g, ""); //清除"数字"和"."以外的字符
+          this.currentValue = this.currentValue.replace(/^\./g, ""); //验证第一个字符是数字
+          this.currentValue = this.currentValue.replace(/\.{2,}/g, "."); //只保留第一个, 清除多余的
+          this.currentValue = this.currentValue.replace(".", "$#$").replace(/\./g, "").replace("$#$", ".");
+          this.currentValue = this.currentValue.replace(new RegExp('^(\\-)*(\\d+)\\.(\\d{1,' + this.limitPoint + '}).*$'), '$1$2.$3'); //只能输入两个小数
+        }
+      },
       enterFn($event) {
         this.$emit('enter', $event)
       },

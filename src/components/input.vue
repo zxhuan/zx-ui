@@ -7,6 +7,10 @@
       <span slot="label-text">这里写姓名备注</span>
       <zx-input v-model='inputValue' place='请输入您的用户名'></zx-input>
     </zx-form-group>
+    <zx-form-group title='限制小数'>
+      <zx-input v-model='num' place='请输入两位小数' limit-point="2" type="number">
+      </zx-input>
+    </zx-form-group>
     <zx-form-group title='用户名+图标'>
       <zx-input v-model='inputValue' place='请输入您的用户名'>
         <i class="icon" slot='icon'></i>
@@ -64,6 +68,7 @@
         inputValue: '',
         username: '',
         bool: false,
+        num: 1,
         subForm: {
           mobile: '',
           code: '',
