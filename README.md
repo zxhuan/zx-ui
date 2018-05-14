@@ -30,8 +30,8 @@ Vue.use(Zxui)
 ```
 ## Look at Examples
 ```
-git clone https://gitee.com/zxhuan/vue-zx-ui.git
-cd vue-zx-ui
+git clone https://github.com/zxhuan/zx-ui.git
+cd zx-ui
 npm install
 npm run start
 ```
