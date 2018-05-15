@@ -4,11 +4,15 @@
     <div style="display: flex;justify-content: space-between;padding:0 10px">
       <a href='https://github.com/zxhuan/zx-ui.git'>git 地址</a>
       <a href="https://www.npmjs.com/package/zx-ui">npm 地址</a>
-      <a href="https://zxhuan.github.io/eg/">案例</a>      
+      <a href="https://zxhuan.github.io/eg/">案例</a>
     </div>
     <div>
     </div>
     <zx-cell-group>
+      <zx-cell-item type='link' border arrow href='/icon'>
+        <span slot='left'>图标</span>
+        <span slot='left'>icon</span>
+      </zx-cell-item>
       <zx-cell-item type='link' border arrow href='/button'>
         <span slot='left'>按钮</span>
         <span slot='left'>button</span>
@@ -52,7 +56,6 @@
     </zx-cell-group>
   </div>
 </template>
-
 <script>
   export default {
     name: 'index',

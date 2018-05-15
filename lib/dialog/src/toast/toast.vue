@@ -29,7 +29,7 @@
     },
     watch: {
       position(val) {
-        console.log(val);
+        // console.log(val);
       },
     },
     data() {

@@ -21,6 +21,8 @@ module.exports = {
   ],
   // add your custom rules here
   rules: {
+    "key-spacing": "off",
+    "comma-spacing": "off",
     "no-useless-escape": "off",
     "eqeqeq": "off",
     "no-new-object": "off",
@@ -28,7 +30,7 @@ module.exports = {
     "no-trailing-spaces": "off",
     "no-unneeded-ternary": "off",
     "space-before-function-paren": "off",
-    "no-extend-native":"off",
+    "no-extend-native": "off",
     "no-array-constructor": "off",
     "padded-blocks": 'off',
     "indent": "off",
