@@ -25,10 +25,8 @@
         console.log(this.value);
       },
       'select.currentValue'(val) {
-        if (!val) {
-          this.select.currentLabel = '';
-          return false;
-        } else if (this.select.currentValue == this.value) {
+        let pattern = /^\s*$/g;
+        if (val == this.value && !pattern.test(val) || val === this.value) {
           this.select.currentLabel = this.$el.innerHTML;
         }
       }
@@ -42,11 +40,13 @@
         this.$emit('input', this.select.currentValue);
       },
       bindClass() {
-        return this.value == this.select.currentValue ? 'active' : '';
+        let pattern = /^\s*$/g;
+        return this.value === this.select.currentValue ? 'active' : '';
       }
     },
     mounted() {
-      if (this.select.currentValue == this.value) {
+      let pattern = /^\s*$/g;
+      if (this.select.currentValue == this.value && !pattern.test(this.select.currentValue) || this.select.currentValue === this.value) {
         this.select.currentLabel = this.$el.innerHTML;
       }
     }

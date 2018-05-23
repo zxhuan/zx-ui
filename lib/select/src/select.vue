@@ -80,7 +80,7 @@
       // 表单规则验证
       validatorInput(value, bool) {
         this.init();
-        if (this.required && this.currentValue == '') {
+        if (this.required && this.currentValue === '') {
           this.msg = this.place;
           this.valid = false;
           return;
