@@ -1,6 +1,6 @@
 # zx-ui
 
-> 基于vue 写的一些移动端UI组件，包含表单，列表，弹层，按钮，选项卡等
+> Some mobile terminal UI components based on Vue include forms, lists, shells, buttons, tabs, etc
 
 ## component
 
@@ -35,6 +35,9 @@ cd zx-ui
 npm install
 npm run start
 ```
+## View the document
+```
+https://zxhuan.github.io/
+```
 
 
-For detailed explanation on how things work, checkout the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
