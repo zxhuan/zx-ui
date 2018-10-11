@@ -483,7 +483,9 @@ textarea {
     text-align: left;
     position: relative;
 }
-
+.zx-select.zx-select-disabled .form-input-wrap{
+    background: #ebebe4;
+}
 .zx-select::after {
     display: block;
     content: "";

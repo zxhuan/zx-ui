@@ -1,8 +1,8 @@
 <template>
-  <div class="zx-select">
+  <div class="zx-select" :class="disabled?'zx-select-disabled':''">
     <slot name='icon'></slot>
-    <input type="text" :placeholder="place" v-model="currentValue" @click="showBool=true" style="display:none">
-    <div class="form-input-wrap" @click="showBool=true">
+    <input type="text" :placeholder="place" v-model="currentValue" @click="showMask" style="display:none">
+    <div class="form-input-wrap" @click="showMask">
       <div class="form-input">
         <span v-if="currentLabel!=''">{{currentLabel}}</span>
         <span v-else style="color: rgb(117, 117, 117);">{{place}}</span>
@@ -34,6 +34,10 @@
       };
     },
     props: {
+      disabled: {
+        type: Boolean,
+        default: false
+      },
       place: {
         type: String
       },
@@ -64,6 +68,10 @@
     },
     // inject: ['select'],
     methods: {
+      showMask() {
+        if(this.disabled){return false};
+        this.showBool = true;
+      },
       handleOptionSelect(option) {
         this.currentValue = option.value;
       },
@@ -123,5 +131,4 @@
   };
 </script>
 <style scoped>
-  
 </style>

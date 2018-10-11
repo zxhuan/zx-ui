@@ -1,6 +1,6 @@
 {
   "name": "zx-ui",
-  "version": "1.1.51",
+  "version": "1.1.53",
   "description": "一个基于Vue2.x的移动端UI。项目中写的一些简单的vueUI框架，不断学习不断完善",
   "main": "index.js",
   "repository": {
